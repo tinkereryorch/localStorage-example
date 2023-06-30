@@ -1,8 +1,8 @@
 'use client';
-import Form from "./components/form";
+import Container from "./components/container";
 
 export default function Home() {
   return(
-    <Form />
+    <Container />
   );
 }
