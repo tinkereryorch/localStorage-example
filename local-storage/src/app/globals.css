@@ -1,0 +1,24 @@
+form {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+label, #rememberUserInfoBtn, #forgetUserInfoBtn {
+  margin-left: 10px; 
+}
+
+.showUserInfo p {
+  margin-right: 10px;
+}
+
+.container {
+  background-color: #164B60;
+  height: 200px;
+  color: white;
+
+}
+
+form div {
+  margin-top: 30px;
+}
