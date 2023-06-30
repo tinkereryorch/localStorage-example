@@ -13,19 +13,19 @@ export default function Form() {
         const storedEmail = localStorage.getItem('email');
         const storedIsForgetShown = localStorage.getItem('isForgetShown');
         const storedIsRememberShown = localStorage.getItem('isRememberShown');
-    
+
         if (storedUsername && storedEmail) {
-          setUsername(storedUsername);
-          setEmail(storedEmail);
+            setUsername(storedUsername);
+            setEmail(storedEmail);
         }
-    
+
         if (storedIsForgetShown && storedIsRememberShown) {
-          setIsForgetShown(storedIsForgetShown === 'true');
-          setIsRememberShown(storedIsRememberShown === 'true');
+            setIsForgetShown(storedIsForgetShown === 'true');
+            setIsRememberShown(storedIsRememberShown === 'true');
         }
 
         setIsLoading(false);
-      }, []);
+    }, []);
 
     useEffect(() => {
         localStorage.setItem('username', userName);
@@ -76,14 +76,9 @@ export default function Form() {
                 </div>
             )}
             {isForgetShown && (
-                <div>
-                    <div className="showUserInfo">
-                        <p>{userName}</p>
-                        <p>{email}</p>
-                    </div>
-                    <div className="forgetUserInfo">
-                        <input type="submit" id="forgetUserInfoBtn" value="Forget me!" onClick={handleForget} />
-                    </div>
+                <div className="showUserInfo">
+                    <span>{userName} : {email}</span>
+                    <input type="submit" id="forgetUserInfoBtn" value="Forget me!" onClick={handleForget} />
                 </div>
             )}
         </form>
